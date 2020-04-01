@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>shake</title>
+        <style>
+                .sideA {background-color: #FDD;}
+                .sideB {background-color: #DDF;}
+                .sideB #minDiv {display: none;}
+                #content {
+                    width: 100%;
+                    height: 400px;
+                }
+                #minDiv {
+                    width: 100%;
+                    padding-top: 150px;
+                    font-size: 50px;
+                    text-align: center;
+                }
+            </style>
+        <script src="https://raw.githack.com/HGustavs/Shaker.js/master/shaker.js"></script>
+    </head>
+    <body>
+        <div id="content" class="sideA">
+            <script>
+                        document.getElementById("content").className="sideA";
+                        var mittVarde = 0;
+                        shaker.on("step", function () {
+                            mittVarde = mittVarde + 1;
+                            document.getElementById("minDiv").innerHTML = +mittVarde;
+
+                            var element = document.getElementById("content");
+                            if (mittVarde < 25) {
+                                element.className = "sideA";
+                            }
+                            else if (mittVarde == 25) {
+                                element.className = "sideB";
+                                document.getElementById("powerup").play();
+                            }
+                            else {
+                                element.className = "sideB";
+                            }
+                        });
+                    </script>
+            <div id="minDiv">0</div>
+        </div>
+    </body>
+</html>
