@@ -18,12 +18,10 @@ public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
 
     public void showExternalWebPage(){
-        // TODO: Add your code for showing external web page here
         myWebView.loadUrl("https://wwwlab.iit.his.se/b19ponka/projekt1/walkthewalk.html");
     }
 
     public void showInternalWebPage(){
-        // TODO: Add your code for showing internal web page here
         myWebView.loadUrl("file:///android_asset/shake.html");
     }
 
@@ -61,15 +59,6 @@ public class MainActivity extends AppCompatActivity {
            showing your App. One (1) screenshot showing your internal web page and
            one (1) screenshot showing your external web page.
         */
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
